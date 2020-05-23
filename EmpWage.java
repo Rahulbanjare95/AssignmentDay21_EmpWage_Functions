@@ -9,10 +9,26 @@ public class EmpWage{
    public static final int  MAX_HRS_IN_MONTH=10;
 
 
+//......... New-Branch UC 7---------------------
+
+	public void empWageCalculator(int empHrs,int EMP_RATE_PER_HR){
+			empHrs=0;
+			int attendence=(int) Math.floor(Math.random()*10)%3;
+			 if(attendence==IS_FULL_TIME)
+                empHrs=8;
+        else if(attendence==IS_PART_TIME)
+                empHrs=4;
+
+        int Salary = (empHrs*EMP_RATE_PER_HR);
+
+			System.out.println("Salary by Function:"+Salary);
+		}
+
+
 
 
 	public static void main(String args[] ){
-	System.out.println("Welcome");
+/* 	System.out.println("Welcome");
 
 	int	is_Present=1;
 	int	empHrs=0;
@@ -116,6 +132,19 @@ public class EmpWage{
         totalEmpWage+=empWage;
         }
 		System.out.println("Total Wage till 100 hrs and 20 Working days ="+ totalEmpWage);
+
+*/
+//-----------------------New Branch UC-6 ---------------------------------------------
+
+					//Using Method to calculate Wage
+	
+		EmpWage e = new EmpWage();
+
+
+			e.empWageCalculator(10,EMP_RATE_PER_HR);
+
+
+
 
 	}
 }
