@@ -21,8 +21,6 @@ public class EmpWage{
         while(totalWorkingDays<=MAX_WORKING_DAYS &&
                 totalWorkingHrs<MAX_HRS_IN_MONTH)
 			{
-
-
         totalWorkingDays++;
         int empCheck= (int) (Math.floor(Math.random()*10)%2+1);
 
@@ -47,17 +45,9 @@ public class EmpWage{
 
 		}
 
-
-
-
 	public static void main(String args[] ){
-
-
-
 		EmpWage e = new EmpWage();
-
-
-			e.empWageCalculator(10,EMP_RATE_PER_HR);
+		e.empWageCalculator(10,EMP_RATE_PER_HR);
 
 
 
