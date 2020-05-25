@@ -12,104 +12,16 @@ public class EmpWage{
 //......... New-Branch UC 7---------------------
 
 	public void empWageCalculator(int empHrs,int EMP_RATE_PER_HR){
-			empHrs=0;
-			int attendence=(int) Math.floor(Math.random()*10)%3;
-			 if(attendence==IS_FULL_TIME)
-                empHrs=8;
-        else if(attendence==IS_PART_TIME)
-                empHrs=4;
+				empHrs=0;
 
-        int Salary = (empHrs*EMP_RATE_PER_HR);
+	 			int totalWorkingDays=0;
+        		int totalWorkingHrs=0;
+				int totalEmpWage=0;
 
-			System.out.println("Salary by Function:"+Salary);
-		}
-
-
-
-
-	public static void main(String args[] ){
-/* 	System.out.println("Welcome");
-
-	int	is_Present=1;
-	int	empHrs=0;
-
-//-------------New Branch UC1------------
-	int attendence=(int) Math.floor(Math.random()*10)%3;
-
-	if(attendence ==is_Present){
-	System.out.println("Present");
-	}
-	else if(attendence ==2){
-	System.out.println("Part-Time");
-	}
-	else { System.out.println("Absent");}
-
-//------------New Branch UC2--------------
-	  if(attendence==IS_FULL_TIME)
-        {
-        empHrs=8;
-        }
-		int empWage=(empHrs*EMP_RATE_PER_HR);
-		System.out.println("EmpWage Full-Time "+empWage);
-//-----------New Branch UC 3-------
-		if(attendence==IS_FULL_TIME)
-                empHrs=8;
-        else if(attendence==IS_PART_TIME)
-                empHrs=4;
-
-        empWage = (empHrs*EMP_RATE_PER_HR);
-        System.out.println("Emp Wage daily "+ empWage);
-
-//--------------New Branch uC 4-------------
-		
-                switch (attendence)
-        {
-                case IS_FULL_TIME:
-                        empHrs=8;
-                        break;
-                case IS_PART_TIME:
-                        empHrs=4;
-                        break;
-                default:
-                        empHrs=0;
-                                break;
-        }
-		empWage = (empHrs*EMP_RATE_PER_HR);
-        System.out.println("Emp Wage Using Case  "+ empWage);
-
-// ------------New Branch UC5 -------------------------
-		 int totalEmpWage=0;
-		 for(int day =0;day<NUM_WORKING_DAYS;day++)
-        {
-                int empCheck= (int) (Math.floor(Math.random()*10)%2+1);
-
-                switch (empCheck)
-                {
-                case IS_FULL_TIME:
-                        empHrs=8;
-                        break;
-                case IS_PART_TIME:
-                        empHrs=4;
-                        break;
-                default:
-                        empHrs=0;
-                                break;
-                }
-        empWage = (empHrs*EMP_RATE_PER_HR);
-        totalEmpWage+=empWage;
-        }
-			System.out.println("Total Wage For a month - "+totalEmpWage);
-
-//------------------------New Branch UC 6------------------------------
-
-		  int totalWorkingDays=0;
-        int totalWorkingHrs=0;
-
-			
         while(totalWorkingDays<=MAX_WORKING_DAYS &&
                 totalWorkingHrs<MAX_HRS_IN_MONTH)
-{
-  
+			{
+
 
         totalWorkingDays++;
         int empCheck= (int) (Math.floor(Math.random()*10)%2+1);
@@ -127,17 +39,21 @@ public class EmpWage{
                                 break;
                 }
 
-        totalWorkingHrs+=empHrs;
-         empWage = (empHrs*EMP_RATE_PER_HR);
-        totalEmpWage+=empWage;
+        		totalWorkingHrs+=empHrs;
+     			int empWage = (empHrs*EMP_RATE_PER_HR);
+       		totalEmpWage+=empWage;
         }
-		System.out.println("Total Wage till 100 hrs and 20 Working days ="+ totalEmpWage);
+      System.out.println("Total Wage till 100 hrs and 20 Working days ="+ totalEmpWage);
 
-*/
-//-----------------------New Branch UC-6 ---------------------------------------------
+		}
 
-					//Using Method to calculate Wage
-	
+
+
+
+	public static void main(String args[] ){
+
+
+
 		EmpWage e = new EmpWage();
 
 
